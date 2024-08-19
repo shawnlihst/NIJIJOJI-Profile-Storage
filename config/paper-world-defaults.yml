@@ -143,7 +143,7 @@ entities:
       enabled: false
       items:
         cobblestone: 300
-    count-all-mobs-for-spawning: false
+    count-all-mobs-for-spawning: true
     creative-arrow-despawn-rate: default
     despawn-ranges:
       ambient:
@@ -184,7 +184,7 @@ entities:
     iron-golems-can-spawn-in-air: false
     monster-spawn-max-light-level: default
     non-player-arrow-despawn-rate: default
-    per-player-mob-spawns: true
+    per-player-mob-spawns: false
     scan-for-legacy-ender-dragon: true
     skeleton-horse-thunder-spawn-chance: default
     slime-spawn-height:
