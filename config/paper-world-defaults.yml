@@ -247,10 +247,10 @@ environment:
   portal-search-radius: 128
   portal-search-vanilla-dimension-scaling: true
   treasure-maps:
-    enabled: true
+    enabled: false
     find-already-discovered:
       loot-tables: default
-      villager-trade: false
+      villager-trade: true
   water-over-lava-flow-speed: 5
 feature-seeds:
   generate-random-seeds-for-all: false
