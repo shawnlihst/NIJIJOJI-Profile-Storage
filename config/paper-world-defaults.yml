@@ -314,4 +314,4 @@ tick-rates:
   wet-farmland: 1
 unsupported-settings:
   disable-world-ticking-when-empty: false
-  fix-invulnerable-end-crystal-exploit: true
+  fix-invulnerable-end-crystal-exploit: false

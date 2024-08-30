@@ -104,7 +104,7 @@ world-settings:
       animals: 32
       monsters: 32
       raiders: 64
-      misc: 16
+      misc: 0
       water: 16
       villagers: 32
       flying-monsters: 32
@@ -168,7 +168,7 @@ world-settings:
       swim-multiplier: 0.01
       sprint-multiplier: 0.1
       other-multiplier: 0.0
-    max-tnt-per-tick: 100
+    max-tnt-per-tick: 1000
     max-tick-time:
       tile: 50
       entity: 50

@@ -43,7 +43,7 @@ projectile:
 # they're far away from the player
 dab:
   
-  enabled: false
+  enabled: true
   # This value determines how far away an entity has to be
   # from the player to start being effected by DEAR.
   start-distance: 12
