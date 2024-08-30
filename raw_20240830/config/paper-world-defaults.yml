@@ -20,12 +20,10 @@ anticheat:
     hidden-blocks:
     - copper_ore
     - deepslate_copper_ore
-    - raw_copper_block
     - gold_ore
     - deepslate_gold_ore
     - iron_ore
     - deepslate_iron_ore
-    - raw_iron_block
     - coal_ore
     - deepslate_coal_ore
     - lapis_ore
@@ -145,6 +143,7 @@ entities:
         cobblestone: 300
     count-all-mobs-for-spawning: true
     creative-arrow-despawn-rate: default
+    despawn-range-shape: ELLIPSOID
     despawn-ranges:
       ambient:
         hard: 128
@@ -247,10 +246,10 @@ environment:
   portal-search-radius: 128
   portal-search-vanilla-dimension-scaling: true
   treasure-maps:
-    enabled: false
+    enabled: true
     find-already-discovered:
       loot-tables: default
-      villager-trade: true
+      villager-trade: false
   water-over-lava-flow-speed: 5
 feature-seeds:
   generate-random-seeds-for-all: false
@@ -300,6 +299,8 @@ scoreboards:
   use-vanilla-world-scoreboard-name-coloring: false
 spawn:
   allow-using-signs-inside-spawn-protection: false
+  keep-spawn-loaded: true
+  keep-spawn-loaded-range: 10
 tick-rates:
   behavior:
     villager:

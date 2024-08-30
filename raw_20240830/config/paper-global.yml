@@ -18,6 +18,17 @@ block-updates:
   disable-mushroom-block-updates: false
   disable-noteblock-updates: false
   disable-tripwire-updates: false
+chunk-loading:
+  autoconfig-send-distance: true
+  enable-frustum-priority: false
+  global-max-chunk-load-rate: -1.0
+  global-max-chunk-send-rate: -1.0
+  global-max-concurrent-loads: 500.0
+  max-concurrent-sends: 2
+  min-load-radius: 2
+  player-max-chunk-load-rate: -1.0
+  player-max-concurrent-loads: 20.0
+  target-player-chunk-send-rate: 100.0
 chunk-loading-advanced:
   auto-config-send-distance: true
   player-max-concurrent-chunk-generates: 0
@@ -70,6 +81,7 @@ misc:
   client-interaction-leniency-distance: default
   compression-level: default
   fix-entity-position-desync: true
+  lag-compensate-block-breaking: true
   load-permissions-yml-before-plugins: true
   max-joins-per-tick: 3
   region-file-cache-size: 256
@@ -117,6 +129,7 @@ timings:
   - proxies.velocity.secret
   history-interval: 300
   history-length: 3600
+  really-enabled: false
   server-name: Unknown Server
   server-name-privacy: false
   url: https://timings.aikar.co/
