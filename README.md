@@ -13,3 +13,7 @@ https://gist.github.com/Earthcomputer/2296da33b8cc91dba81b48103c0e1fe3
 https://yizhan.wiki/NitWikit/advance
 
 https://github.com/YouHaveTrouble/minecraft-optimization
+
+其他参考：
+
+https://github.com/lilingfengdev/PaperCrash
