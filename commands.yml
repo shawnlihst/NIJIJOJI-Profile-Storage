@@ -5,5 +5,5 @@ aliases:
   - version $1-
   fpmodeon:
   - "fp spawn fpbot minecraft:overworld 8103 16 11509"
-    fpmodeoff:
+  fpmodeoff:
   - "fp kill fpbot"
