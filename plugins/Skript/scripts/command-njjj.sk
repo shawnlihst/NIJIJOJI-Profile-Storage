@@ -8,7 +8,7 @@ command /fpmode <text>:
             set {_p} to "fpbot" parsed as a player
             if {_p}  is offline:
                 console command "fp spawn fpbot minecraft:overworld 8103 16 11509"
-                send "<green>伪和平已开启！除了特殊机制刷新的怪物如幻翼和袭击，其他怪物将不会在主世界生成！" to player
+                send "<green>伪和平已开启！除了<red>特殊机制刷新的怪物如幻翼和袭击<green>，其他怪物将不会在主世界生成！" to player
             else:
                 send "<green>伪和平已经开启！" to player
 
