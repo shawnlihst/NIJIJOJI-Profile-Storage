@@ -1,6 +1,6 @@
 command /fpmode <text>:
     description: Enable or disable the fpbot mode.
-    usage: 这个命令是用来开关伪和平的，使用例：/fpmode <on/off>
+    usage: <green>这个命令是用来开关伪和平的，使用例：<red>/fpmode <on/off>
     permission: skript.fpmode
     executable by: players
     trigger:
