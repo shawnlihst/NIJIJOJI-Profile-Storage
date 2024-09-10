@@ -1,0 +1,57 @@
+
+#
+# A very simple `broadcast` command for broadcasting the text argument.
+# This is accessible only to users with the `skript.example.broadcast` permission.
+#
+
+command /fpmode <text>:
+     permission: skript.fpmode # Permission required for this command
+     description: Open/Close fpmode # Description of this command
+     executable by:    players # Console won't be able to run this command
+     if {arg::1} is "on":
+        # 执行服务器命令以启动 fpbot
+        console command "fp spawn fpbot"
+        # 向玩家发送消息（可选）
+        send "FP mode has been enabled." to sender
+
+    # 检查第一个参数是否为 "off"
+    else if {arg::1} is "off":
+        # 执行服务器命令以停止 fpbot
+        console command "fp kill fpbot"
+        # 向玩家发送消息（可选）
+        send "FP mode has been disabled." to sender
+
+    # 如果参数不是 "on" 或 "off"，则通知玩家正确的用法
+    else:
+        send "Correct usage: /fpmode <on/off>" to sender
+
+#
+# A simple /home command that allows players to set, remove and travel to homes.
+# This command is executable only by players, and has a `correct usage` message.
+# The first argument is required, whereas the second is optional.
+#
+
+command /home <text> [<text>]:
+    description: Set, delete or travel to your home.
+    usage: /home set/remove <name>, /home <name>
+    permission: skript.example.home
+    executable by: players
+    trigger:
+        if arg-1 is "set":
+            if arg-2 is set:
+                set {homes::%uuid of player%::%arg-2%} to player's location
+                send "Set your home <green>%arg-2%<reset> to <grey>%location of player%<reset>" to player
+            else:
+                send "You must specify a name for this home." to player
+        else if arg-1 is "remove":
+            if arg-2 is set:
+                delete {homes::%uuid of player%::%arg-2%}
+                send "Deleted your home <green>%arg-2%<reset>" to player
+            else:
+                send "You must specify the name of this home." to player
+        else if arg-2 is set:
+            send "Correct usage: /home set/remove <name>" to player
+        else if {homes::%uuid of player%::%arg-1%} is set:
+            teleport player to {homes::%uuid of player%::%arg-1%}
+        else:
+            send "You have no home named <green>%arg-1%<reset>." to player
