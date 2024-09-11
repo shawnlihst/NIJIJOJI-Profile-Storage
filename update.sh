@@ -66,7 +66,7 @@ if [ $DoCopy -eq 1 ]; then
     cp -r git_source/purpur.yml .
     cp -r git_source/start.sh .
     cp -r git_source/server.properties .
-    cp -r git_source/plugins/Skript/scripts .
+    cp -r git_source/plugins/Skript/scripts/* plugins/Skript/scripts/
 else
     echo "跳过复制操作。"
 fi
