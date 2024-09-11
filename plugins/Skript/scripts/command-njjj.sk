@@ -6,16 +6,28 @@ command /fpmode <text> :
     trigger:
         if arg-1 is "on":
             set {_p} to "fpbot" parsed as a player
+            set {fp_loc} to the location at 8102, 17, 11492
             if {_p}  is offline:
                 console command "fp spawn fpbot minecraft:overworld 8103 16 11509"
-                send "<green>伪和平已开启！除了<red>特殊机制刷新的怪物如幻翼和袭击<green>，其他怪物将不会在主世界生成！" to player
+                broadcast "<green>伪和平启动中！请稍等~~~~~~~~~~~~~~~~"
+                wait 5 seconds
+                spawn 200 silverfish at {fp_loc}
+                wait 5 seconds
+                spawn 200 silverfish at {fp_loc}
+                wait 5 seconds
+                spawn 200 silverfish at {fp_loc}
+                wait 5 seconds
+                spawn 200 silverfish at {fp_loc}
+                wait 5 seconds
+                spawn 200 silverfish at {fp_loc}
+                broadcast "<green>伪和平已开启！除了<red>特殊机制刷新的怪物如幻翼和袭击<green>，其他怪物将不会在主世界生成！"
             else:
-                send "<green>伪和平已经开启！" to player
+                send "<green>伪和平已经开启了！不需要重复开启" to player
 
         else if arg-1 is "off":
             console command "tp fpbot  33 89 -49"
-            wait 1 minutes
+            wait 3 seconds
             console command "fp kill fpbot"
-            send "<yellow>伪和平已关闭！小心哦！" to player
+            broadcast "<yellow>伪和平已关闭！小心哦！"
         else:
             send "Correct usage: /fpmode <on/off>" to player
