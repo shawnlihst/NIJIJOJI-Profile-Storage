@@ -1,4 +1,4 @@
-command /fpmode <text>:
+command /fpmode <text> :
     description: Enable or disable the fpbot mode.
     usage: <green>这个命令是用来开关伪和平的，使用例：<red>/fpmode <on/off>
     permission: skript.fpmode
@@ -13,6 +13,8 @@ command /fpmode <text>:
                 send "<green>伪和平已经开启！" to player
 
         else if arg-1 is "off":
+            console command "tp fpbot  33 89 -49"
+            sleep 3
             console command "fp kill fpbot"
             send "<yellow>伪和平已关闭！小心哦！" to player
         else:
