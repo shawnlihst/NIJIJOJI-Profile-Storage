@@ -25,8 +25,6 @@ command /fpmode <text> :
                 send "<green>伪和平已经开启了！不需要重复开启" to player
 
         else if arg-1 is "off":
-            console command "tp fpbot  33 89 -49"
-            wait 3 seconds
             console command "fp kill fpbot"
             broadcast "<yellow>伪和平已关闭！小心哦！"
         else:
