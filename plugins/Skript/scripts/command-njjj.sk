@@ -14,7 +14,7 @@ command /fpmode <text> :
 
         else if arg-1 is "off":
             console command "tp fpbot  33 89 -49"
-            sleep 3
+            wait 1 minutes
             console command "fp kill fpbot"
             send "<yellow>伪和平已关闭！小心哦！" to player
         else:
