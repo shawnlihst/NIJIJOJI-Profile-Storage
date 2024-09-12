@@ -6,7 +6,7 @@ command /fpmode <text> :
     trigger:
         if arg-1 is "on":
             set {_p} to "fpbot" parsed as a player
-            set {fp_loc} to the location at 8102, 17, 11492
+            set {fp_loc} to the location at 8102, 17, 11492 of the world "world"
             if {_p}  is offline:
                 console command "fp spawn fpbot minecraft:overworld 8103 16 11509"
                 broadcast "<green>伪和平启动中！请稍等~~~~~~~~~~~~~~~~"
